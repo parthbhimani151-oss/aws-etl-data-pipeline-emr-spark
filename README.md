@@ -16,19 +16,14 @@ In this guide, you will learn:
 - How to integrate EMR with Amazon S3
 - How to integrate S3 bucket with Amazon Athena
 
-## Requirements
+## Tools & Technologies
 
-Before Starting this guide, you will need:
-
-- An AWS account (if you don't yet have one, please create one and [set up your environment](https://aws.amazon.com/getting-started/guides/setup-environment/))
-- An IAM user that has the access and create AWS resources.
-- Basic understanding of Python
-
-## Use case and problem statement
-
-For this project, let's assume you have a vendor who provides incremental sales data at the end of every month. And the data arrives into S3 bucket as `CSV`file and it needs to be processed and made available for data analysts or scientists for querying and analysis.
-
-We need to build a data pipeline that it will take this new sales file from the S3 bucket, processes it with required transformations using Amazon EMR, and would save the cleaned and transformed data into the target S3 bucket, which will be used later on for querying.
+- AWS S3 – Data Lake storage
+- AWS EMR – Distributed computing cluster
+- Apache Spark (PySpark) – Data processing engine
+- AWS Glue – Metadata catalog and schema management
+- Amazon Athena – SQL query engine for S3 data
+- Python – ETL scripting
 
 ## Architecture
 
@@ -36,7 +31,7 @@ To implement this data pipeline, we will use EMR cluster with Spark as the distr
 
 
 
- <img src="images/etl-data-archit.gif" width=""/>
+ <img src="images/architecture.png" width="100%">
 
 ## Create an EMR Cluster
 
